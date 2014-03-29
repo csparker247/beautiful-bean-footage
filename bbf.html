@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Video Set Browser</title>
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Ubuntu' />
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<script src="scripts/jquery-1.11.0.min.js"></script>
+	<script src="scripts/jquery-ui-1.10.4.js"></script>
+	<script src="scripts/gs-controls.js"></script>
+</head>
+<body>
+<div class="mainContent">
+	<h1>Video Set Browser</h1>
+	<div class="vidContent">
+		<video id="videoPlayer">
+			<source id="mp4Vid" src="" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	<div class="controlBar">
+		<div id="progressBar">
+		</div>
+		<div class="thisNav">
+			<span class="button vidNav disable" id="prevTest">&#8592;</span>
+			<span class="button vidNav" id="playPause">&#9655;</span>
+			<span class="button vidNav disable" id="nextTest">&#8594;</span>
+			<span id="vidNum"></span>
+			<span class="button vidAns disable" id="showAnswer">Reveal Answer</span>
+			<div class="clear"></div>
+		</div>
+	</div>
+	</div>
+	<div class="setColumn">
+		<h2>Sets</h2>
+		<ul class="setTracker">
+		<script type="text/javascript">
+			for (var i=0; i < setList.length; i++) {
+				document.write("<li class='setButton' id='" + i + "'>" + setList[i][0] + "</li>");
+			}
+			$("#" + thisSet).addClass("highlight");
+		</script>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+</body>
+</html>
