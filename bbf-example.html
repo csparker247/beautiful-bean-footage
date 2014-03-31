@@ -7,13 +7,9 @@
 	<script src="scripts/bbf.js"></script>
 </head>
 <body>
-	<div class="bbf center">
-		<video>
-			<source src="media/std1/answer.mp4" type="video/mp4">
-		</video>
-		<video>
-			<source src="media/std2/answer.mp4" type="video/mp4">
-		</video>
-	</div>
+	<bbf-player class="center">
+		<bbf-video mpv="test/answer.mp4" ogg="test/answer.ogg" />
+		<bbf-video mpv="test/test1.mp4" ogg="test/test1.ogg" />
+	</bbf-player>
 </body>
 </html>

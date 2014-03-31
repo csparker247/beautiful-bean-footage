@@ -1,20 +1,20 @@
 $(function() {
 	//Setup the player	
 	$(document).ready(function() {
-		//Hide the extra sources
-		var vidList = $(".bbf").children();
-		$.each(vidList, function (index, value) {
-			if (index > 0) {
-				$(vidList[index]).hide();
-			};
+		var bbfPlaylist;
+
+		//Get our sources
+		$("bbf-video").each(function ( index ){
+			console.log( index + $(this).attr("mpv") );
+			console.log( index + $(this).attr("ogg") );
 		});
 
 		//Add the media controllers
-		$prev = $( "<span class='bbfNav' id='bbfprev'>&#8592;</span>" );
-		$playPause = $( "<span class='bbfNav' id='bbfplayPause'>&#9655;</span>" );
-		$next = $( "<span class='bbfNav' id='bbfnext'>&#8594;</span>" );
-
-		$(".bbf").append($prev, $playPause, $next);
+		prev = "<span class='bbf-nav' id='bbfprev'>&#8592;</span>";
+		playPause = "<span class='bbf-nav' id='bbfplayPause'>&#9655;</span>";
+		next = "<span class='bbf-nav' id='bbfnext'>&#8594;</span>";
+		controls = "<div id='bbf-controls'>" + prev + playPause + next + "</div>";
+		$("bbf-player").append(controls);
 	});
 
 });
